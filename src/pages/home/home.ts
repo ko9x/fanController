@@ -3,6 +3,8 @@ import { NavController } from 'ionic-angular';
 
 import * as $ from 'jquery';
 import * as evothings from '../../libs/evothings/evothings.js'
+import * as easyble from '../../libs/evothings/easyble/easyble.js'
+
 
 @Component({
   selector: 'page-home',
@@ -50,8 +52,6 @@ export class HomePage {
     this.disconnect();
   
     console.log('Scanning started...');
-  
-    // app.devices = {};
   
     var htmlString =
       '<img src="img/loader_small.gif" style="display:inline; vertical-align:middle">' +
@@ -192,7 +192,7 @@ export class HomePage {
     }
   
     // Stop scanning
-    evothings.easyble.stopScan();
+    evothings.easyble.stopScan(); 
   
     // Connect to our device
     console.log('Identifying service for communication');
@@ -212,7 +212,7 @@ export class HomePage {
     this.device = null;
   
     // Stop any ongoing scan and close devices.
-    evothings.easyble.stopScan();
+    easyble.stopScan();
     evothings.easyble.closeConnectedDevices();
   
     console.log('Disconnected');

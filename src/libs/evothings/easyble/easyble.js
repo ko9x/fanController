@@ -197,6 +197,7 @@
 	 */
 	evothings.easyble.startScan = function(serviceUUIDs, success, fail)
 	{
+		console.log('did we get here?', ); //@DEBUG
 		evothings.easyble.stopScan();
 
 		internal.knownDevices = {};

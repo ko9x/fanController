@@ -8,7 +8,7 @@
   <!DOCTYPE html>
   <html>
   
-  <head>
+  <!-- <head>
   
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no,
@@ -35,11 +35,11 @@
     <script src="libs/jquery/jquery.js"></script>
     <script src="app.js"></script>
   
-  </head>
+  </head> -->
   
-  <body ontouchstart="">
+  <!-- <body ontouchstart=""> -->
   
-    <header>
+    <!-- <header>
   
       <button class="back" onclick="history.back()">
         <img src="ui/images/arrow-left.svg" />
@@ -47,13 +47,13 @@
   
       <img class="logotype" src="ui/images/logo.svg" alt="Evothings" />
   
-    </header>
+    </header> -->
   
     <h1>Raspberry Pi 3 - System Information</h1>
   
     <div id="startView">
       <img class="center" src="img/rpi3.jpg">
-      <button class="red wide" onclick="app.startScan()">Scan</button>
+      <button class="red wide" (click)="startScan()">Scan</button>
     </div>
   
     <div id="scanResultView" style="display:none"></div>
@@ -71,10 +71,10 @@
       <div id="memory"></div>
       <div id="loadaverage"></div>
   
-      <button id="disconnectButton" class="red wide" onclick="app.disconnect()">Disconnect</button>
+      <button id="disconnectButton" class="red wide" (click)="disconnect()">Disconnect</button>
     </div>
   
-  </body>
+  <!-- </body> -->
   
   </html>
 </ion-content>
